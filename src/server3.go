@@ -17,7 +17,7 @@ func main() {
 }
 
 func gendata(w http.ResponseWriter, r *http.Request){
-        var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        var letters = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOP~!@#$%^&* `;',./><QRSTUVWXYZ")
         rand.Seed(time.Now().UnixNano())
         inputArg, err := r.URL.Query()["numBytes"]
         intVar, er := strconv.Atoi(inputArg[0])
