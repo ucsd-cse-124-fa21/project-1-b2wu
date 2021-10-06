@@ -34,7 +34,7 @@ func gendata(w http.ResponseWriter, r *http.Request){
                 b[i] = letters[rand.Intn(len(letters))]
         }
         fmt.Fprintf(w, "%s\n",string(b))
-  
+}
 
 func handler(w http.ResponseWriter, r *http.Request){
         fmt.Fprintf(w, "%s %s %s\n", r.Method, r.URL, r.Proto)
